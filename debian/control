@@ -2,9 +2,10 @@ Source: monit
 Section: admin
 Priority: optional
 Maintainer: Sergey B Kirpichev <skirpichev@gmail.com>
-DM-Upload-Allowed: yes
-Build-Depends: debhelper (>= 7.0.50), libssl-dev, libpam-dev, libkvm-dev [kfreebsd-any]
-Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 9), libssl-dev, libpam-dev, libkvm-dev [kfreebsd-any], autotools-dev
+# this strange things was installed only on ia64 buildd:
+Build-Conflicts: automake, autoconf
+Standards-Version: 3.9.4
 Homepage: http://mmonit.com/monit/
 Vcs-Git: git://git.debian.org/git/collab-maint/monit.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/monit.git;a=summary

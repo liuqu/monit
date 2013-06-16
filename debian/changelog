@@ -1,8 +1,58 @@
-monit (1:5.5-1~bpo60+1) squeeze-backports; urgency=low
+monit (1:5.5.1-1) unstable; urgency=low
 
-  * Rebuild for squeeze-backports.
+  * Imported Upstream version 5.5.1
+  * Refresh patches, drop unused
 
- -- Sergey B Kirpichev <skirpichev@gmail.com>  Mon, 10 Sep 2012 14:23:57 +0400
+ -- Sergey B Kirpichev <skirpichev@gmail.com>  Sun, 16 Jun 2013 13:54:38 +0400
+
+monit (1:5.5-6) unstable; urgency=low
+
+  * Include stdlib.h to fix blhc E: pointer-trouble-at-implicit in
+    FileTest.c
+  * Drop DMUA, fix lintian warning
+  * Bump up Standards-Version (to 3.9.4)
+  * Use autotools-dev helpers to update config.guess/config.sub (fix
+    lintian warning: outdated-autotools-helper-file)
+
+ -- Sergey B Kirpichev <skirpichev@gmail.com>  Thu, 27 Dec 2012 14:11:12 +0400
+
+monit (1:5.5-5) unstable; urgency=low
+
+  * Fix FTBFS on ia64, a second attempt
+  * Revert back -c option in monit.init
+  * Implement sysdep_HURD.c
+  * Correct description for patch 11
+  * Add missing DEP3 "Forwarded" headers
+
+ -- Sergey B Kirpichev <skirpichev@gmail.com>  Thu, 13 Dec 2012 17:01:58 +0400
+
+monit (1:5.5-4) unstable; urgency=low
+
+  * Fix (I think) FTBFS on ia64 due to installed automake
+  * Update patch 11: fix PATH_MAX issues for Hurd
+
+ -- Sergey B Kirpichev <skirpichev@gmail.com>  Wed, 12 Dec 2012 22:52:55 +0400
+
+monit (1:5.5-3) unstable; urgency=low
+
+  * Fix FTBFS for i386 and kfreebsd-i386: patch 10
+  * Enable building on Hurd: patch 11
+
+ -- Sergey B Kirpichev <skirpichev@gmail.com>  Tue, 11 Dec 2012 16:06:27 +0400
+
+monit (1:5.5-2) unstable; urgency=low
+
+  * Show error while doing an attempt to stop daemon as non-root user
+    (LP: #877667)
+  * Use /run as pidfile location, patch 09 was added
+  * Drop support for "startup" option and /etc/monit/monit_delay
+  * Update patch 08 from upstream
+  * Drop monit_check_config (monitrc now non-empty by default)
+  * Cleanup restart target in monit.init
+  * Drop -c $CONFIG argument from monit options in monit.init
+  * Drop multiarch workarround for libssl in debian/rules
+
+ -- Sergey B Kirpichev <skirpichev@gmail.com>  Sun, 09 Dec 2012 17:42:20 +0400
 
 monit (1:5.5-1) unstable; urgency=low
 
