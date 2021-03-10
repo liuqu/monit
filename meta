@@ -1,6 +1,7 @@
 Version: 1
-Previous: None
-Head: dc9bc1c949125140d967edfc598dfad47eedc552
+Previous: 3cf744ba260ddec6c33958a79eba9c54ee41b4e4
+Head: 12eda29d39399cbeca654549233a743631070413
 Applied:
+  0001-used_system_memory_sysdep-Use-MemAvailable-value-if-.patch: 12eda29d39399cbeca654549233a743631070413
 Unapplied:
 Hidden:
